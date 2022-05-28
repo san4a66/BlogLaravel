@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class CreateController extends Controller
 {
-    public function __invoke(): string
+    public function __invoke()
     {
         return view('admin.categories.create');
     }
