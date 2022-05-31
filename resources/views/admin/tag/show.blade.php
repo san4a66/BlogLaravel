@@ -44,7 +44,6 @@
                                     <tr>
                                         <td>Id</td>
                                         <td>{{$tag->id}}</td>
-                                        <td><a href="#"><i class="far fa-eye"></i></a></td>
                                     </tr>
                                     <tr>
                                         <td>Название</td>
