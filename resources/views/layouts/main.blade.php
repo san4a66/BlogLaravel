@@ -27,6 +27,16 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('main.index')}}">Блог</a>
                     </li>
+
+                    <li class="nav-item active">
+                        @auth()
+                            <a class="nav-link" href="{{route('personal.main.index')}}">Личный кабинет</a>
+                        @endauth
+                        @guest()
+                                <a class="nav-link" href="{{route('personal.main.index')}}">Войти</a>
+                            @endguest
+                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -40,9 +50,11 @@
         <div class="footer-banner" data-aos="fade-up">
             <h1 class="banner-title">Download it now.</h1>
             <div class="banner-btns-wrapper">
-                <button class="btn btn-success"><img src="{{asset('assets/images/apple@1x.svg')}} " alt="ios" class="mr-2"> App Store
+                <button class="btn btn-success"><img src="{{asset('assets/images/apple@1x.svg')}} " alt="ios"
+                                                     class="mr-2"> App Store
                 </button>
-                <button class="btn btn-success"><img src="{{asset('assets/images/android@1x.svg')}} " alt="android" class="mr-2">
+                <button class="btn btn-success"><img src="{{asset('assets/images/android@1x.svg')}} " alt="android"
+                                                     class="mr-2">
                     Google Play
                 </button>
             </div>
